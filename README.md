@@ -24,32 +24,17 @@ Average anomaly score for correctly classified images:  0.117  <br>
 Average anomaly score for incorrectly classified images:  0.118 <br>
 **Great accuracy on the testing dataset. Slightly higher anomaly score for incorrectly classified images**
 
-Digit 0 Accuracy: 98.78% <br>
+Digit 0 Accuracy: 98.98% <br>
 Digit 1 Accuracy: 98.77% <br>
-Digit 2 Accuracy: 94.28% <br>
-Digit 3 Accuracy: 94.55% <br>
-Digit 4 Accuracy: 95.01% <br>
-Digit 5 Accuracy: 93.83% <br>
+Digit 2 Accuracy: 94.48% <br>
+Digit 3 Accuracy: 94.65% <br>
+Digit 4 Accuracy: 95.11% <br>
+Digit 5 Accuracy: 93.61% <br>
 Digit 6 Accuracy: 97.08% <br>
-Digit 7 Accuracy: 94.16% <br>
-Digit 8 Accuracy: 94.05% <br>
-Digit 9 Accuracy: 93.56% <br>
+Digit 7 Accuracy: 94.07% <br>
+Digit 8 Accuracy: 93.94% <br>
+Digit 9 Accuracy: 93.76% <br>
 **Digits 0, 1 and 6 have higher accuracy than other digits.**
-
-
-## Files
-
-**saraogeeweek10.go:** Main routine to load MNIST dataset, train random forests and compare tests with isolation forests.
-
-**saraogeeweek10_test.go:** does unit tests for loading dataset and prediction dimensions.
-
-**goScores.csv** output file of random forest classification results and anomaly scores on test dataset.
-
-**Under the imagesout directory** misclassified images with prediction and anomaly score.
-
-**Under the data directory:** Compressed image and label files for MNIST. See **README.md** under this directory for addition information about the original MNIST data.
-
-**Week10** executable for saraogeeweek10.go on whole dataset cross-compiled Go code for Mac/Windows. 
 
 ## Installation and Running
 
@@ -77,6 +62,19 @@ Our other projects highlight our expertise in using Go for various machine learn
 [Desktop Applications](https://github.com/asaraog/msds431week8): A protype desktop application is created using Wails/Svelte and Vale for assisted writing.
 [Natural Language Processing](https://github.com/asaraog/msds431week9): A protype desktop application is created using Wails/Svelte for a simple lookup function from a corpus.
 
+## Files for this project
+
+**saraogeeweek10.go:** Main routine to load MNIST dataset, train random forests and compare tests with isolation forests.
+
+**saraogeeweek10_test.go:** does unit tests for loading dataset and prediction dimensions.
+
+**goScores.csv** output file of random forest classification results and anomaly scores on test dataset.
+
+**Under the imagesout directory** misclassified images with prediction and anomaly score.
+
+**Under the data directory:** Compressed image and label files for MNIST. See **README.md** under this directory for addition information about the original MNIST data.
+
+**Week10** executable for saraogeeweek10.go on whole dataset cross-compiled Go code for Mac/Windows. 
 
 
 

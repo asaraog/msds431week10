@@ -25,7 +25,7 @@ func main() {
 	trainlabels := labels[0:50000]
 	validationlabels := labels[50001:]
 
-	//Training of randomForest models on validation data
+	//Training of 4 different randomForest models on validation data
 	forest1 := randomforest.Forest{}
 	forest2 := randomforest.Forest{}
 	forest3 := randomforest.Forest{}
@@ -43,10 +43,10 @@ func main() {
 	p3 := 0
 	p4 := 0
 	for i := 0; i < len(validationimages); i++ {
-		vote1 := forest1.Vote(validationimages[i])
-		vote2 := forest2.Vote(validationimages[i])
-		vote3 := forest3.Vote(validationimages[i])
-		vote4 := forest4.Vote(validationimages[i])
+		vote1 := forest1.Vote(validationimages[i]) //Performs prediction using model 1
+		vote2 := forest2.Vote(validationimages[i]) //Performs prediction using model 2
+		vote3 := forest3.Vote(validationimages[i]) //Performs prediction using model 3
+		vote4 := forest4.Vote(validationimages[i]) //Performs prediction using model 4
 		bestV1 := 0.0
 		bestV2 := 0.0
 		bestV3 := 0.0
@@ -55,25 +55,25 @@ func main() {
 		bestI2 := -1
 		bestI3 := -1
 		bestI4 := -1
-		for j, v := range vote1 {
+		for j, v := range vote1 { //Finds predicted digit with highest confidence from random forest
 			if v > bestV1 {
 				bestV1 = v
 				bestI1 = j
 			}
 		}
-		for j, v := range vote2 {
+		for j, v := range vote2 { //Finds predicted digit with highest confidence from random forest
 			if v > bestV2 {
 				bestV2 = v
 				bestI2 = j
 			}
 		}
-		for j, v := range vote3 {
+		for j, v := range vote3 { //Finds predicted digit with highest confidence from random forest
 			if v > bestV3 {
 				bestV3 = v
 				bestI3 = j
 			}
 		}
-		for j, v := range vote4 {
+		for j, v := range vote4 { //Finds predicted digit with highest confidence from random forest
 			if v > bestV4 {
 				bestV4 = v
 				bestI4 = j
