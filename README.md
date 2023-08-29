@@ -5,48 +5,48 @@ This project aims to build an image processing demonstraion using Go looking to 
 
 Like in other projects, we see that Go is extremely fast in classifying and recognizing the images. The MNIST dataset is ideal for benchmarking an OCR pipeline. Development would focus on integrating new observations into the random forest model by using the [AddDataRow function](https://github.com/malaschitz/randomForest/blob/82dce2f56816/forest.go#L119). A key next step would be to integrate real-time image recognition for robotic process automation. This will be accomplished using [GoCV](https://gocv.io/), which leverages OpenCV, a well known computer vision library built by Intel in 1999. 
 
-Other deep learning and image processing applications were considered but ultimately dropped due to various reasons outlined below:
--[Gorgonia](https://gorgonia.org/tutorials/mnist/): Gorgonia is considered the gold standard and has support for convolutional neural networks. However, using tensors for modeling was not straightforward.
--[go-deep](https://github.com/patrikeh/go-deep): Active repository for deep neural network. This was our initially preferred modelling method but ran into unexpected behavior. The validation accuracy was >95% but the test accuracy was ~11% indicating overfitting. More work is needed on this package.
--[golearn](https://github.com/sjwhitworth/golearn): Pacakge includes various machine learning models for easy comparison. However data input requires using FixedDataGrid format or csv files.
--[pigo](https://github.com/esimov/pigo): This package is a great alternative to OpenCV for image processing. However, it requires additional development to connect with a camera which is why we propose a system using GoCV instead.
+Other deep learning and image processing applications were considered but ultimately dropped due to various reasons outlined below: \n
+- [Gorgonia](https://gorgonia.org/tutorials/mnist/): Gorgonia is considered the gold standard and has support for convolutional neural networks. However, using tensors for modeling was not straightforward and the MNIST driver had a version issue. \n
+- [go-deep](https://github.com/patrikeh/go-deep): Active repository for deep neural network. This was our initially preferred modelling method but we ran into unexpected behavior on the testset. The validation accuracy was >95% but the test accuracy was ~11% indicating overfitting. More work is needed on this package. \n
+- [golearn](https://github.com/sjwhitworth/golearn): Pacakge includes various machine learning models for easy comparison. However data input requires using FixedDataGrid format or csv files. \n
+- [pigo](https://github.com/esimov/pigo): This package is a great alternative to OpenCV for image processing. However, it requires additional development to connect with a camera which is why we propose a system using GoCV instead.
 
 
 ## Results
 
-Model 1 Results:  94.3%
-Model 2 Results:  94.5%
-Model 3 Results:  95.7%
-Model 4 Results:  95.9%
+Model 1 Accuracy:  94.1%  \n
+Model 2 Accuracy:  94.5%  \n
+Model 3 Accuracy:  95.8%  \n
+Model 4 Accuracy:  96.0%  \n
 **Model 4 performs the best with 1000 trees and "extra"-random partitioning**
 
-Test Accuracy:  95.5%
-Average anomaly score for correctly classified images:  11.7
-Average anomaly score for incorrectly classified images:  11.8
+Test Accuracy:  95.5%  \n
+Average anomaly score for correctly classified images:  0.117  \n
+Average anomaly score for incorrectly classified images:  0.118 \n
 **Great accuracy on the testing dataset. Slightly higher anomaly score for incorrectly classified images**
 
-Confusion Matrix:
-  968   0       0       0       0       3       5       1       3       0
-  0     1121    3       4       0       1       3       1       2       0
-  8     0       977     6       9       3       5       13      9       2
-  3     0       14      955     1       17      0       9       7       4
-  2     0       2       0       931     0       8       2       5       32
-  7     2       0       20      1       836     10      1       11      4
-  11    3       1       0       6       4       929     0       4       0
-  2     6       27      2       1       0       0       971     4       15
-  5     0       5       6       7       8       5       4       917     17
-  5     4       1       12      11      7       4       6       11      948
+Confusion Matrix: \n
+  968   0       1       0       0       4       3       1       3       0  \n
+  0     1121    3       4       0       1       4       1       1       0  \n
+  8     0       973     6       10      3       6       12      12      2  \n
+  1     0       15      955     1       16      0       9       8       5  \n
+  2     0       2       0       933     0       8       2       6       29  \n
+  7     2       1       20      1       837     9       1       11      3  \n
+  12    3       1       0       4       5       930     0       3       0  \n
+  2     6       26      2       1       0       0       968     4       19  \n
+  5     0       5       8       6       9       4       4       916     17  \n
+  5     5       2       12      11      8       4       5       13      944  \n
 
-Class 0 Accuracy: 98.78%
-Class 1 Accuracy: 98.77%
-Class 2 Accuracy: 94.67%
-Class 3 Accuracy: 94.55%
-Class 4 Accuracy: 94.81%
-Class 5 Accuracy: 93.72%
-Class 6 Accuracy: 96.97%
-Class 7 Accuracy: 94.46%
-Class 8 Accuracy: 94.15%
-Class 9 Accuracy: 93.95%
+Digit 0 Accuracy: 98.78%  \n
+Digit 1 Accuracy: 98.77%  \n
+Digit 2 Accuracy: 94.28%  \n
+Digit 3 Accuracy: 94.55%  \n
+Digit 4 Accuracy: 95.01%  \n
+Digit 5 Accuracy: 93.83%  \n
+Digit 6 Accuracy: 97.08%  \n
+Digit 7 Accuracy: 94.16%  \n
+Digit 8 Accuracy: 94.05%  \n
+Digit 9 Accuracy: 93.56%  \n
 **Digits 0, 1 and 6 have higher accuracy than other digits.**
 
 
