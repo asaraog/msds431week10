@@ -53,14 +53,14 @@ Images are printed in a new directory 'imagesout' with the name coressponding to
 
 Our other projects highlight our expertise in using Go for various machine learning tasks with comparisons to Python/R:
 
-[Stats in Go](https://github.com/asaraog/msds431week2): Runtimes were compared for linear regression in the [Anscombe Quartet](https://www.sjsu.edu/faculty/gerstman/StatPrimer/anscombe1973.pdf) with Python/R.
-[Websites using Go](https://github.com/asaraog/msds431week3): A promotional website is created for a company titled []'AutoNotes'](https://autonotes.netlify.app/) using Hugo.
-[Command line applications in Go](https://github.com/asaraog/msds431week4): Summary statistics for the California Housing Prices study are compared with Python/Go.
-[Scraping the web using Go](https://github.com/asaraog/msds431week5): Scrapes the Web for Wikipedia pages and compare results with Python's scrapy package.
-[Linear Regression using Go](https://github.com/asaraog/msds431week6): Runtimes were compared with and without concurrency for linear regression in the Boston Housing Study.
-[Isolation Forests](https://github.com/asaraog/msds431week7): Isolation forests are trained on the MNIST dataset and compared with R/Python on the whole dataset and by digit for correlation and runtime.
-[Desktop Applications](https://github.com/asaraog/msds431week8): A protype desktop application is created using Wails/Svelte and Vale for assisted writing.
-[Natural Language Processing](https://github.com/asaraog/msds431week9): A protype desktop application is created using Wails/Svelte for a simple lookup function from a corpus.
+[Stats in Go](https://github.com/asaraog/msds431week2): Runtimes were compared for linear regression in the [Anscombe Quartet](https://www.sjsu.edu/faculty/gerstman/StatPrimer/anscombe1973.pdf) with Python/R. <br>
+[Websites using Go](https://github.com/asaraog/msds431week3): A promotional website is created for a company titled []'AutoNotes'](https://autonotes.netlify.app/) using Hugo. <br>
+[Command line applications in Go](https://github.com/asaraog/msds431week4): Summary statistics for the California Housing Prices study are compared with Python/Go. <br>
+[Scraping the web using Go](https://github.com/asaraog/msds431week5): Scrapes the Web for Wikipedia pages and compare results with Python's scrapy package. <br>
+[Linear Regression using Go](https://github.com/asaraog/msds431week6): Runtimes were compared with and without concurrency for linear regression in the Boston Housing Study. <br>
+[Isolation Forests](https://github.com/asaraog/msds431week7): Isolation forests are trained on the MNIST dataset and compared with R/Python on the whole dataset and by digit for correlation and runtime. <br>
+[Desktop Applications](https://github.com/asaraog/msds431week8): A protype desktop application is created using Wails/Svelte and Vale for assisted writing. <br>
+[Natural Language Processing](https://github.com/asaraog/msds431week9): A protype desktop application is created using Wails/Svelte for a simple lookup function from a corpus. <br>
 
 ## Files for this project
 
