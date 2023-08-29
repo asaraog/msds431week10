@@ -11,7 +11,6 @@ Other deep learning and image processing applications were considered but ultima
 - [golearn](https://github.com/sjwhitworth/golearn): Pacakge includes various machine learning models for easy comparison. However data input requires using FixedDataGrid format or csv files.
 - [pigo](https://github.com/esimov/pigo): This package is a great alternative to OpenCV for image processing. However, it requires additional development to connect with a camera which is why we propose a system using GoCV instead.
 
-
 ## Results
 
 Model 1 Accuracy:  94.1%  <br>
@@ -24,18 +23,6 @@ Test Accuracy:  95.5%  <br>
 Average anomaly score for correctly classified images:  0.117  <br>
 Average anomaly score for incorrectly classified images:  0.118 <br>
 **Great accuracy on the testing dataset. Slightly higher anomaly score for incorrectly classified images**
-
-Confusion Matrix:<b>
-  968   0       1       0       0       4       3       1       3       0  <br>
-  0     1121    3       4       0       1       4       1       1       0  <br>
-  8     0       973     6       10      3       6       12      12      2  <br>
-  1     0       15      955     1       16      0       9       8       5  <br>
-  2     0       2       0       933     0       8       2       6       29  <br>
-  7     2       1       20      1       837     9       1       11      3 <br>
-  12    3       1       0       4       5       930     0       3       0 <br>
-  2     6       26      2       1       0       0       968     4       19 <br>
-  5     0       5       8       6       9       4       4       916     17 <br>
-  5     5       2       12      11      8       4       5       13      944 <br>
 
 Digit 0 Accuracy: 98.78% <br>
 Digit 1 Accuracy: 98.77% <br>
@@ -50,11 +37,17 @@ Digit 9 Accuracy: 93.56% <br>
 **Digits 0, 1 and 6 have higher accuracy than other digits.**
 
 
-## Under the go directory
+## Files
 
 **saraogeeweek10.go:** Main routine to load MNIST dataset, train random forests and compare tests with isolation forests.
 
 **saraogeeweek10_test.go:** does unit tests for loading dataset and prediction dimensions.
+
+**goScores.csv** output file of random forest classification results and anomaly scores on test dataset.
+
+**Under the imagesout directory** misclassified images with prediction and anomaly score.
+
+**Under the data directory:** Compressed image and label files for MNIST. See **README.md** under this directory for addition information about the original MNIST data.
 
 **Week10** executable for saraogeeweek10.go on whole dataset cross-compiled Go code for Mac/Windows. 
 
